@@ -1,12 +1,57 @@
-# React + Vite
+🛠 Tech Stack
+React.js – Frontend framework
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Tailwind CSS – Styling utility-first CSS framework
 
-Currently, two official plugins are available:
+OpenWeatherMap API – Weather and forecast data
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+React Spinners – Loading animation (react-spinners)
 
-## Expanding the ESLint configuration
+LocalStorage – Recent search + theme persistence
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+⚙️ Setup Instructions
+Clone the repository:
+
+bash
+Copy
+Edit
+git clone https://github.com/your-username/weather-dashboard.git
+cd weather-dashboard
+Install dependencies:
+
+bash
+Copy
+Edit
+npm install
+Add your API key: Create a .env file in the root directory and add your OpenWeatherMap API key:
+
+env
+Copy
+Edit
+VITE_WEATHER_API_KEY=your_api_key_here
+Start the development server:
+
+bash
+Copy
+Edit
+npm run dev
+Your app will be running at http://localhost:5173 (if using Vite).
+
+🔗 API Integration Details
+OpenWeatherMap API
+Current Weather API:
+https://api.openweathermap.org/data/2.5/weather?q={city}&units=metric&appid={API_KEY}
+
+5-Day Forecast API:
+https://api.openweathermap.org/data/2.5/forecast?q={city}&units=metric&appid={API_KEY}
+
+Usage Notes:
+API Key Required: You must sign up at openweathermap.org to get a free API key.
+
+Rate Limits (Free Tier):
+
+60 calls per minute
+
+1,000,000 calls/month
+
+Units: We're using metric for Celsius.
